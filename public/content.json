@@ -18,7 +18,7 @@
         "date": "2024-10-15",
         "description": "Collecting the satellite images from the Google Earth Engine, and save them to the Google Drive and make file be searchable and accessible by using Google Cloud App Engine, Flask, ArcGIS SDK, for Model training preprocessing.",
         "urls": {
-          "Github": "https://github.com/wayne-xyz/DPportal",
+          "Github": "https://github.com/rongweiji/DPportal",
           "Website": "http://areas-degradadas-peru.com/"
         },
         "image": "/2.png"
@@ -99,12 +99,12 @@
         "date": "2024-11-18",
         "description": "MIRA (Stanford Hackathon project)- VisionPro APP is an advanced AI-driven tool that integrates LLMs (Large Language Models) to enhance conversations by generating immersive 3D scenes based on discussion topics. It supports Text-to-Speech (TTS) and Speech-to-Text (STT) capabilities while delivering an engaging user experience through Swift and SwiftUI technologies.",
         "urls": {
-          "GitHub": "https://github.com/wayne-xyz/MIRA"
+          "GitHub": "https://github.com/rongweiji/MIRA"
         },
         "project_source": {
           "images": ["/9.png"]
         },
-        "gif": "https://github.com/wayne-xyz/MIRA/raw/main/ezgif-4-214148f4d7.gif"
+        "gif": "https://github.com/rongweiji/MIRA/raw/main/ezgif-4-214148f4d7.gif"
       },
       {
         "id": 10,
@@ -113,7 +113,7 @@
         "date": "2024-11-30",
         "description": "GEEExpUI is a user-friendly desktop application for exporting high-resolution TIFF files from Google Earth Engine to Google Drive",
         "urls": {
-          "GitHub": "https://github.com/wayne-xyz/GEEExpUI",
+          "GitHub": "https://github.com/rongweiji/GEEExpUI",
           "Youtube":"https://youtu.be/_ddzpUMCEuw"
         },
         "image": "/10.jpg"
@@ -128,7 +128,7 @@
           "Website": "https://livcap.app",
           "AppStore": "Coming Soon",
           "Youtube": "https://youtu.be/-fp2xLChtmE",
-          "Github": "https://github.com/wayne-xyz/LivCap"
+          "Github": "https://github.com/rongweiji/LivCap"
         },
         "image": "/livcap.png"
       },
@@ -150,7 +150,7 @@
         "date": "2025-01-15",
         "description": "Dualsense Controller Teleoperation and ACT IL Policy on ALOHA for one bigym task.  Implemented a multi-buffer inference system for improved movement stability, and applied an inference result scaler to address action attenuation—ensuring that the movement amplitude was sufficient to avoid object penetration in this scenario 100% avoided.  Integrated MuJoCo Warp in headless mode, achieving a 10x increase in step speed.",
         "urls": {
-          "GitHub": "https://github.com/wayne-xyz/Dualsense-ALOHA",
+          "GitHub": "https://github.com/rongweiji/Dualsense-ALOHA",
           "Medium":"https://medium.com/@wayenj/dualsense-aloha-teleop-act-il-bigym-task-mujoco-warp-9e55618d49cd"
         },
         "project_source": {
@@ -169,7 +169,7 @@
         "date": "2025-05-01",
         "description": "A method based on linear resonant actuator from dualsense controller, with human handing posture, and LSTM molde, gains the biometics features. Achieved an accuracy of 98.5% and reducing Equal Error Rate (EER) to 0.4%. Robustness and generalization tests, conducted under varying environmental conditions and background noise scenarios",
         "urls": {
-          "GitHub": "https://github.com/wayne-xyz/Playsense-ID",
+          "GitHub": "https://github.com/rongweiji/Playsense-ID",
           "Paper":"https://scholar.smu.edu/engineering_compsci_etds/49/"
         },
         "image": "/14.png"
@@ -181,7 +181,7 @@
         "date": "2025-10-01",
         "description": "A technical walkthrough of implementing an inverse kinematics (IK) solver for the Xlerobot platform in NVIDIA Isaac Sim. Covers the process of integrating custom robot URDFs, setting up the simulation environment, and developing a Python-based IK solution for precise end-effector control. Includes practical insights, code snippets, and troubleshooting tips for robotics researchers and developers working with Isaac Sim.",
         "urls": {
-          "Blog": "https://wayne-xyz.github.io/robot/2025/10/01/IK-Solver-For-Xlerobot-in-Issac-Sim.html"
+          "Blog": "https://rongweiji.github.io/robot/2025/10/01/IK-Solver-For-Xlerobot-in-Issac-Sim.html"
         },
         "image": "/15.gif"
       }
