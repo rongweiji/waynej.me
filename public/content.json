@@ -184,7 +184,18 @@
           "Blog": "https://rongweiji.github.io/robot/2025/10/01/IK-Solver-For-Xlerobot-in-Issac-Sim.html"
         },
         "image": "/15.gif"
+      },
+      {
+        "id": 16,
+        "type": "blog",
+        "title": "ReLL: Reproduce Learned Localization with GICP Registration of Lidar&DSM",
+        "date": "2025-10-10",
+        "description": "A complete reproduction of the learned localization pipeline using GICP registration for LiDAR and Digital Surface Model (DSM) alignment. Covers implementation details omitted from the original paper, including data preparation, model architecture, and training procedures. Demonstrates that GICP significantly improves alignment accuracy, achieving translation RMS of ~0.1m at 0.2m resolution. Compares refinement techniques (softmax, Gaussian peak fitting) and identifies the correlation between localization quality and LiDAR point coverage.",
+        "urls": {
+          "Blog": "https://rongweiji.github.io/localization/2025/10/10/Reproduce-Learned-Localization-with-GICP-Registration.html"
+        },
+        "image": "/16.png"
       }
-      
+
     ]
   }
