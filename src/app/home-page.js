@@ -1,8 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { useRouter } from 'next/navigation'
-import Image from "next/image"
+import { useState } from "react"
 import Link from "next/link"
 import { Github, Linkedin, Youtube, Mail, BookOpen } from "lucide-react"
 
@@ -14,44 +12,16 @@ import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { ContentCard } from "@/components/ContentCard"
-import { ContentModal } from "@/components/ContentModal"
 import { ProfileNavigation } from "@/components/ProfileNavigation"
-import { loadPostDetails } from "@/utils/postLoader"
 
 const HomePage = () => {
   const [selectedTypes, setSelectedTypes] = useState([])
-  const [selectedPost, setSelectedPost] = useState(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [savedScrollPosition, setSavedScrollPosition] = useState(0)
 
   const { profile, isLoading: profileLoading, error: profileError } = useProfile()
   const { content, isLoading: contentLoading, error: contentError } = useContent()
-  const router = useRouter()
 
   devLog('HomePage: profile', profile);
   devLog('HomePage: content', content);
-
-  // Handle browser back/forward navigation
-  useEffect(() => {
-    const handlePopState = () => {
-      if (window.location.pathname === '/' && isModalOpen) {
-        // User pressed back button while modal was open
-        setIsModalOpen(false);
-        setSelectedPost(null);
-        
-        // Restore scroll position
-        setTimeout(() => {
-          window.scrollTo({
-            top: savedScrollPosition,
-            behavior: 'auto'
-          });
-        }, 50);
-      }
-    };
-
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, [isModalOpen, savedScrollPosition]);
 
   if (profileLoading || contentLoading) {
     devLog('HomePage: Still loading');
@@ -82,38 +52,6 @@ const HomePage = () => {
 
   // Get all unique types including 'Product'
   const uniqueTypes = Array.from(new Set(content.posts.map(post => post.type)))
-
-  const handlePostClick = async (id) => {
-    devLog('Clicked post with id:', id);
-    try {
-      // Save current scroll position before opening modal
-      setSavedScrollPosition(window.scrollY);
-      
-      const postDetails = await loadPostDetails(id);
-      devLog('Loaded post details:', postDetails);
-      setSelectedPost(postDetails);
-      setIsModalOpen(true);
-      // Update the URL without triggering a navigation
-      window.history.pushState({}, '', `/post/${id}`);
-    } catch (error) {
-      devLog('Error loading post details:', error);
-    }
-  }
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedPost(null);
-    // Revert the URL to the home page
-    window.history.pushState({}, '', '/');
-    
-    // Restore scroll position after a short delay to ensure modal is closed
-    setTimeout(() => {
-      window.scrollTo({
-        top: savedScrollPosition,
-        behavior: 'auto' // Use 'auto' for instant scroll without animation
-      });
-    }, 50);
-  }
 
   return (
     <div className="container mx-auto p-4 space-y-8">
@@ -182,7 +120,7 @@ const HomePage = () => {
 
       {/* Content Section */}
       <div className="mx-auto" style={{ width: '70%' }}>
-        <div className="space-y-4">
+        <div className="space-y-6">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
               <h2 className="text-2xl font-bold">Content</h2>
@@ -201,19 +139,13 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {sortedContent.map(post => (
-              <ContentCard key={post.id} post={post} onClick={handlePostClick} />
+              <ContentCard key={post.id} post={post} />
             ))}
           </div>
         </div>
       </div>
-
-      <ContentModal 
-        isOpen={isModalOpen} 
-        onClose={handleCloseModal}
-        post={selectedPost} 
-      />
     </div>
   )
 }
