@@ -210,7 +210,7 @@
         "type": "project",
         "title": "AI Learning Assistant (MERN)",
         "date": "2026-01-02",
-        "description": "AI-powered learning assistant leveraging advanced language models to support personalized learning, automate study tasks, and enhance user engagement with smart recommendations and interaction tools.",
+        "description": "AI-powered learning assistant leveraging advanced language models to support personalized learning, automate study tasks, and enhance user engagement with smart recommendations and interaction tools, based on the MERN stack (MongoDB, Express, React, Node.js).",
         "urls": {
           "GitHub": "https://github.com/rongweiji/ai-learning-asistant"
         },
@@ -220,9 +220,9 @@
       {
         "id": 18,
         "type": "project",
-        "title": "nowrobotaxi.com - GIS Web Application for RoboTaxi services development",
+        "title": "nowrobotaxi.com – GIS Web Platform for RoboTaxi Service Development Visualization",
         "date": "2026-01-08",
-        "description": "An GIS based  a web application providing information and services for RoboTaxi technology, optimized geosptial loading from 400ms to 100ms, using the Cloudflare D1 , Mapbox, Nextjs",
+        "description": "An GIS based  a web application providing information and services for RoboTaxi technology, optimized geosptial data loading from 400ms to 100ms, using the Cloudflare D1 , Mapbox, Nextjs",
         "urls": {
           "Website": "https://www.nowrobotaxi.com"
         },
