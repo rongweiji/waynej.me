@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"
+import { useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -6,8 +6,6 @@ import { Badge } from "@/components/ui/badge"
 import { ExternalLink } from "lucide-react"
 
 export function ContentCard({ post }) {
-  const [showTooltip, setShowTooltip] = useState(false)
-  const [tooltipPosition, setTooltipPosition] = useState({ top: 0, left: 0 })
   const descriptionRef = useRef(null)
 
   // Truncate description to make it concise (first 150 characters)
@@ -17,24 +15,8 @@ export function ContentCard({ post }) {
 
   const isTruncated = post.description?.length > 150
 
-  const handleMouseEnter = () => {
-    if (descriptionRef.current && isTruncated) {
-      const rect = descriptionRef.current.getBoundingClientRect()
-      setTooltipPosition({
-        top: rect.bottom + window.scrollY + 8,
-        left: rect.left + window.scrollX
-      })
-      setShowTooltip(true)
-    }
-  }
-
-  const handleMouseLeave = () => {
-    setShowTooltip(false)
-  }
-
   return (
-    <>
-      <Card className="overflow-hidden w-full transition-all duration-300 hover:shadow-lg">
+      <Card className="overflow-visible w-full transition-all duration-300 hover:shadow-lg">
         {/* Image Section with Overlay */}
         <div className="relative w-full h-48 sm:h-56 md:h-64 bg-gray-100 dark:bg-gray-800 overflow-hidden">
           {post.gif ? (
@@ -71,17 +53,22 @@ export function ContentCard({ post }) {
         </div>
 
         {/* Content Section */}
-        <CardContent className="p-4 space-y-3">
+        <CardContent className="p-4 space-y-3 relative">
           {/* Description with Tooltip */}
-          <div>
+          <div className="relative group/tooltip">
             <p
               ref={descriptionRef}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
               className={`text-sm text-muted-foreground leading-relaxed ${isTruncated ? 'cursor-help' : ''}`}
             >
               {conciseDescription}
             </p>
+            {/* Inline tooltip - shows on hover */}
+            {isTruncated && (
+              <div className="absolute left-0 top-full mt-2 w-[400px] max-w-[90vw] p-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl z-[9999] opacity-0 invisible group-hover/tooltip:opacity-100 group-hover/tooltip:visible transition-all duration-200 text-sm text-gray-700 dark:text-gray-300 leading-relaxed pointer-events-none">
+                {post.description}
+                <div className="absolute -top-1 left-4 w-2 h-2 bg-white dark:bg-gray-900 border-l border-t border-gray-200 dark:border-gray-700 transform rotate-45"></div>
+              </div>
+            )}
           </div>
 
         {/* Tags */}
@@ -118,20 +105,5 @@ export function ContentCard({ post }) {
         )}
       </CardContent>
     </Card>
-
-      {/* Tooltip - Rendered outside card at top level with fixed positioning */}
-      {showTooltip && isTruncated && (
-        <div
-          className="fixed z-[9999] w-full max-w-md p-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl text-sm text-gray-700 dark:text-gray-300 leading-relaxed pointer-events-none"
-          style={{
-            top: `${tooltipPosition.top}px`,
-            left: `${tooltipPosition.left}px`,
-          }}
-        >
-          {post.description}
-          <div className="absolute -top-1 left-4 w-2 h-2 bg-white dark:bg-gray-900 border-l border-t border-gray-200 dark:border-gray-700 transform rotate-45"></div>
-        </div>
-      )}
-    </>
   )
 }
