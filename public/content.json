@@ -21,7 +21,8 @@
           "Github": "https://github.com/rongweiji/DPportal",
           "Website": "http://areas-degradadas-peru.com/"
         },
-        "image": "/2.png"
+        "image": "/2.png",
+        "tag":["Google Earth Engine","Satellite Imagery","GIS","Flask","ArcGIS SDK","Google Cloud","App Engine","GCP","Pipeline","Machine Learning"]
       },
       {
         "id": 3,
@@ -90,7 +91,8 @@
         "urls": {
           "Medium": "https://medium.com/@wayenj/mapview-to-image-arcgis-sdk-for-swift-b6f46b72ad6a"
         },
-        "image": "/8.png"
+        "image": "/8.png",
+        "tag":["ArcGIS SDK","Swift","iOS Development","MapView","Image Export","GIS"]
       },
       {
         "id": 9,
@@ -104,7 +106,8 @@
         "project_source": {
           "images": ["/9.png"]
         },
-        "gif": "https://github.com/rongweiji/MIRA/raw/main/ezgif-4-214148f4d7.gif"
+        "gif": "https://github.com/rongweiji/MIRA/raw/main/ezgif-4-214148f4d7.gif",
+        "tag":["VisionPro","Swift","SwiftUI","AI","LLM","TTS","STT","3D Scene Generation","Hackathon"]
       },
       {
         "id": 10,
@@ -116,7 +119,8 @@
           "GitHub": "https://github.com/rongweiji/GEEExpUI",
           "Youtube":"https://youtu.be/_ddzpUMCEuw"
         },
-        "image": "/10.jpg"
+        "image": "/10.jpg",
+        "tag":["Google Earth Engine","GEE","GIS","Python","Tkinter","Google Drive API","big data","Imagery"]
       },
       {
         "id": 11,
