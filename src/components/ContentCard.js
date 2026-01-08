@@ -54,6 +54,21 @@ export function ContentCard({ post }) {
           {conciseDescription}
         </p>
 
+        {/* Tags */}
+        {post.tag && post.tag.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 pt-1">
+            {post.tag.map((tag, index) => (
+              <Badge
+                key={index}
+                variant="secondary"
+                className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
+
         {/* Links */}
         {post.urls && Object.keys(post.urls).length > 0 && (
           <div className="flex flex-wrap gap-2 pt-1">

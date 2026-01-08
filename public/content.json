@@ -130,7 +130,8 @@
           "Youtube": "https://youtu.be/-fp2xLChtmE",
           "Github": "https://github.com/rongweiji/LivCap"
         },
-        "image": "/livcap.png"
+        "image": "/livcap.png",
+        "tag":["macOS","Live Caption","Accessibility","Swift","CoreML","On-Device AI"]
       },
         {
       "id": 12,
@@ -141,7 +142,8 @@
            "urls": {
           "Medium": "https://medium.com/@wayenj/quick-findings-on-device-asr-performance-on-macos-34a8bc4847e2"
         },
-        "image":"/Screen Shot 2025-07-04 at 01.02.35 AM.png"
+        "image":"/Screen Shot 2025-07-04 at 01.02.35 AM.png",
+        "tag":["ASR","Speech Recognition","macOS","Machine Learning","Python","Pytorch","Swift","CoreML"]
       },
       {
         "id": 13,
@@ -160,7 +162,8 @@
 
           ]
         },
-        "gif": "/13.gif"
+        "gif": "/13.gif",
+        "tag":["Reinforcement Learning","Teleoperation","MuJoCo Warp","Dualsense Controller","Python","Pytorch","Robotics","ACT IL"]
       },
       {
         "id": 14,
@@ -172,7 +175,8 @@
           "GitHub": "https://github.com/rongweiji/Playsense-ID",
           "Paper":"https://scholar.smu.edu/engineering_compsci_etds/49/"
         },
-        "image": "/14.png"
+        "image": "/14.png",
+        "tag":["Haptics","Biometrics","LSTM","Machine Learning","Python","Pytorch","Authentication","Gaming","Signal Processing"]
       },
       {
         "id": 15,
@@ -183,7 +187,9 @@
         "urls": {
           "Blog": "https://rongweiji.github.io/robot/2025/10/01/IK-Solver-For-Xlerobot-in-Issac-Sim.html"
         },
-        "image": "/15.gif"
+        "image": "/15.gif",
+        "tag":["Robotics","Isaac Sim","Xlerobot","Inverse Kinematics","Python","Simulation","URDF","NVIDIA","Automation"]
+
       },
       {
         "id": 16,
@@ -195,8 +201,36 @@
           "Blog": "https://rongweiji.github.io/localization/2025/10/10/Reproduce-Learned-Localization-with-GICP-Registration.html",
           "GitHub": "https://github.com/rongweiji/ReLL"
         },
-        "image": "/16.png"
+        "image": "/16.png",
+        "tag":["Lidar","Localization","GICP","DSM","3D Point Cloud","Autonomous Driving","Mapping","Python","Pytorch","Machine Learning"]
+
+      },
+      {
+        "id": 17,
+        "type": "project",
+        "title": "AI Learning Assistant (MERN)",
+        "date": "2026-01-02",
+        "description": "AI-powered learning assistant leveraging advanced language models to support personalized learning, automate study tasks, and enhance user engagement with smart recommendations and interaction tools.",
+        "urls": {
+          "GitHub": "https://github.com/rongweiji/ai-learning-asistant"
+        },
+        "image": "/17.png",
+        "tag":["MERN","AI","Learning Assistant","Web Application","MongoDB","Express","React","Nodejs","Full Stack"]
+      },
+      {
+        "id": 18,
+        "type": "project",
+        "title": "nowrobotaxi.com - GIS Web Application for RoboTaxi services development",
+        "date": "2026-01-08",
+        "description": "An GIS based  a web application providing information and services for RoboTaxi technology, optimized geosptial loading from 400ms to 100ms, using the Cloudflare D1 , Mapbox, Nextjs",
+        "urls": {
+          "Website": "https://www.nowrobotaxi.com"
+        },
+        "image": "/18.gif",
+        "tag":["GIS","React","Mapbox","Cloudflare","Nextjs","Map","Web Application"]
+
       }
+
 
     ]
   }
