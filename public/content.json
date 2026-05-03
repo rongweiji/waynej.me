@@ -210,18 +210,6 @@
 
       },
       {
-        "id": 17,
-        "type": "project",
-        "title": "AI Learning Assistant (MERN)",
-        "date": "2026-01-02",
-        "description": "AI-powered learning assistant leveraging advanced language models to support personalized learning, automate study tasks, and enhance user engagement with smart recommendations and interaction tools, based on the MERN stack (MongoDB, Express, React, Node.js).",
-        "urls": {
-          "GitHub": "https://github.com/rongweiji/ai-learning-asistant"
-        },
-        "image": "/17.png",
-        "tag":["MERN","AI","Learning Assistant","Web Application","MongoDB","Express","React","Nodejs","Full Stack"]
-      },
-      {
         "id": 18,
         "type": "project",
         "title": "nowrobotaxi.com – GIS Web Platform for RoboTaxi Service Development Visualization",
