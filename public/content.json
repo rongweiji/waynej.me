@@ -170,19 +170,6 @@
         "tag":["Reinforcement Learning","Teleoperation","MuJoCo Warp","Dualsense Controller","Python","Pytorch","Robotics","ACT IL","Simulation"]
       },
       {
-        "id": 14,
-        "type": "publication",
-        "title": "Playsense-ID: Haptic-Enhanced Multimodal Biometric Authentication for Gaming Controller Users",
-        "date": "2025-05-01",
-        "description": "A method based on linear resonant actuator from dualsense controller, with human handing posture, and LSTM molde, gains the biometics features. Achieved an accuracy of 98.5% and reducing Equal Error Rate (EER) to 0.4%. Robustness and generalization tests, conducted under varying environmental conditions and background noise scenarios",
-        "urls": {
-          "GitHub": "https://github.com/rongweiji/Playsense-ID",
-          "Paper":"https://scholar.smu.edu/engineering_compsci_etds/49/"
-        },
-        "image": "/14.png",
-        "tag":["Haptics","Biometrics","LSTM","Machine Learning","Python","Pytorch","Authentication","Gaming","Signal Processing"]
-      },
-      {
         "id": 15,
         "type": "blog",
         "title": "IK Solver for Xlerobot in Isaac Sim",
@@ -207,6 +194,19 @@
         },
         "image": "/16.png",
         "tag":["Lidar","Localization","GICP","DSM","3D Point Cloud","Autonomous Driving","Mapping","Python","Pytorch","Machine Learning"]
+
+      },
+      {
+        "id": 17,
+        "type": "publication",
+        "title": "You Define Your Biometrics: Customized Biometric Authentication via Commercial Handheld Device",
+        "date": "2026-02-03",
+        "description": "Introduces a self-defined biometric authentication framework for sensor-rich handheld devices. Users customize signal senders, receivers, and finger-input sequences, while the system performs multi-domain biometric sensing through inputs such as haptics, acoustics, inertial sensors, microphones, buttons, joysticks, and touchpads. The paper validates the approach on DualSense controllers and targets stronger resistance against biometric replay and synthesis attacks.",
+        "urls": {
+          "Paper": "https://ieeexplore.ieee.org/abstract/document/11449685"
+        },
+        "image": "/placeholder-image.jpg",
+        "tag":["Biometrics","Authentication","DualSense","Handheld Devices","Haptics","Acoustics","Inertial Sensors","Security","AI"]
 
       },
       {
